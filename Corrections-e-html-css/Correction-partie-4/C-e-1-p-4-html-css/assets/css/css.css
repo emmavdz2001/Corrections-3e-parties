@@ -1,0 +1,50 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 75px);
+    grid-gap: 10px;
+    gap: 10px;
+}
+
+.one {
+    background-color: rgb(176, 53, 50);
+}
+
+.two {
+    background-color: rgb(51, 168, 165);
+}
+
+.three {
+    background-color: rgb(48, 153, 122);
+}
+
+.four {
+    background-color: rgb(106, 71, 143);
+}
+
+.five {
+    background-color: rgb(218, 111, 43);
+}
+
+.six {
+    background-color: rgb(61, 139, 177);
+}
+
+.seven {
+    background-color: rgb(224, 63, 63);
+}
+
+.eight {
+    background-color: rgb(89, 166, 39);
+}
+
+.nine {
+    background-color: rgb(68, 100, 161);
+}
+
+div>div {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+

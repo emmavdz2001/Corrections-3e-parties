@@ -1,0 +1,219 @@
+/* Police KGWhatATime */
+
+@font-face {
+    font-family: 'KGWhatATime';
+    /* on définit le nom de la police (choix du nom libre) qu'on utilisera par la suite */
+    src: url('../fonts/KGWhatATime.ttf');
+    /* on définit l'emplacement de notre police */
+}
+
+
+/* Reset du css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F3F1DC;
+    overflow-x: hidden;
+}
+
+
+/* -----Exercice 1 : Header----- */
+
+header {
+    height: 50%;
+    /* Ajout de l'image de fond */
+    background-image: url('../img/image_voyage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Position du texte (h1) */
+    display: flex;
+    justify-content: center;
+    /* alignement horizontal */
+    align-items: center;
+    /* alignement vertical */
+    /* Texte */
+    font-family: 'KGWhatATime', cursive;
+    /* on applique la police définit ligne 3 (utiliser le même nom que celui noté ligne 3) */
+    font-size: 2.5rem;
+}
+
+
+/* -----Fin Exercice 1 : Header----- */
+
+
+/* -----Exercice 2 : Navigation----- */
+
+
+/* on cible les ul enfants de la nav */
+
+nav ul {
+    /* Dimension */
+    height: 7vh;
+    /* Position des items de la navigation (li) */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Suppresion des puces sur les items (li) */
+    list-style-type: none;
+    /* Fond de couleur */
+    background-color: #F1E5BD;
+}
+
+
+/* Style des liens */
+
+a {
+    text-decoration: none;
+    /* suppression du trait de soulignement */
+    color: #000000;
+}
+
+
+/* Style des liens au survol (pseudo-class :hover) */
+
+li a:hover {
+    color: #A2825C;
+}
+
+
+/* Style des input (champ + bouton) du formulaire de recherche */
+
+#searchForm input {
+    padding: 5px;
+    border-radius: 5px;
+    /* arrondi des angles des input */
+    border: 2px solid #83B4D5;
+}
+
+#searchButton {
+    background-color: #C3EAF9;
+}
+
+
+/* Bonus: Utilisation du pseudo-élément ::placeholder pour définir le style du placeholder (ne s'applique pas au texte écrit par l'utilisateur) */
+
+#searchText::placeholder {
+    font-style: italic;
+    color: #83B4D5;
+}
+
+li:last-child {
+    display: none;
+}
+
+
+/* -----Exercice 2 : Fin Navigation----- */
+
+
+/* -----Exercice 3 : Présentation----- */
+
+section#presentation {
+    /* Positionnement de la section avec les marges externes et internes */
+    margin: 50px 0px;
+    padding: 0px 200px;
+    /* Positionnement du contenu de la section (le paragraphe) */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Style du paragraphe de présentation */
+
+#presentation p {
+    background-color: #F1E5BD;
+    padding: 30px;
+    text-align: justify;
+}
+
+
+/* -----Exercice 3 : Fin Présentation----- */
+
+
+/* -----Exercice 4 : Destination----- */
+
+#destination {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+}
+
+.box h2 {
+    margin: 15px 0;
+    /* margin : y x; */
+}
+
+
+/* -----Exercice 4 : Fin Destination----- */
+
+
+/* -----Exercice bonus : Responsive tablette----- */
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 20%;
+    }
+    /* Présentation */
+    section#presentation {
+        /* Positionnement de la section avec les marges externes et internes */
+        margin: 20px 0px;
+        padding: 0px 100px;
+    }
+    /* Fin Présentation */
+}
+
+
+/* -----Exercice bonus : Responsive tablette----- */
+
+
+/* -----Exercice bonus : Responsive téléphone----- */
+
+@media screen and (max-width: 480px) {
+    /* Navigation */
+    li:not(:last-child) a,
+    li form {
+        display: none;
+    }
+    li:last-child {
+        display: flex;
+    }
+    /* Fin Navigation */
+    /* Présentation */
+    section#presentation {
+        /* Positionnement de la section avec les marges externes et internes */
+        margin: 20px 0px;
+        padding: 0px 10px;
+    }
+    /* Fin Présentation */
+    /* Destination */
+    #destination {
+        flex-wrap: wrap;
+    }
+    .box {
+        width: 100vw;
+        margin-bottom: 40px;
+    }
+    /* Fin Destination */
+}
+
+
+/* -----Exercice bonus : Fin Responsive----- */
